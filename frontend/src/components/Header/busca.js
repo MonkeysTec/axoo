@@ -2,6 +2,8 @@
 import { useCallback, useState } from 'react'
 import * as S from './Style'
 
+import searchIcon from '../../assets/search.png'
+
 const Busca = () => {
     const [submenus, setSubmenu] = useState([
         {
@@ -27,7 +29,14 @@ const Busca = () => {
 
     return (
         <S.Container>
-            
+            <S.SearchContainer>
+                <div></div>
+                <div></div>
+                <div></div>
+                <S.btnSearch>
+                    <img src={searchIcon} width="60%" />
+                </S.btnSearch>
+            </S.SearchContainer>
             <S.SubMenu {...{ qtd: submenus.length }}>
                 {submenus.map(submenu => <S.OptionSubMenu onClick={toggle} {...submenu}>{submenu.id}</S.OptionSubMenu>)}
                 <S.Transition index={index} />

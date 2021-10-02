@@ -15,6 +15,36 @@ export const Container = styled.div`
     position: relative;
 `
 
+export const SearchContainer = styled.div`
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    border-radius: 0 0 10px 10px;
+
+    align-items: center;
+    justify-content: space-between;
+`
+
+export const btnSearch = styled.div`
+    background: #ff5722;
+    
+    width: 50px;
+    height: calc(100% - 20px);
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    margin: 0 10px;
+
+    cursor: pointer;
+`
+
 export const SubMenu = styled.div`
     position: absolute;
 
@@ -40,7 +70,7 @@ export const SubMenu = styled.div`
 
     `
     
-    export const OptionSubMenu = styled.div`
+export const OptionSubMenu = styled.div`
     width: 50%;
     height: 100%;
     
@@ -48,7 +78,8 @@ export const SubMenu = styled.div`
     
     border-radius: 10px;
 
-    color: ${props => props.active ? "#ff5722" : "gray"};
+    color: ${props => props.active ? "#ff5722" : "#c2c2c2"};
+    font-weight: ${props => props.active ? "bold" : "bold"};
     
     display: flex;
     align-items: center;
